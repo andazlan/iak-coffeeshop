@@ -69,6 +69,11 @@ public class Order {
         this.mChocolate = mChocolate;
     }
 
+    /**
+     * method untuk menghitung sub total yang hasilnya dikembalikan
+     * @return double subtotal
+     */
+
     public double getSubTotal(){
         if (mQty == 0){
             return 0;
@@ -76,6 +81,10 @@ public class Order {
         return mQty * PRICE;
     }
 
+    /**
+     * method untuk menghitung total yang hasilnya dikembalikan
+     * @return double total
+     */
     public double getTotal(){
         double total = getSubTotal();
         if (isWhippedCream()){
@@ -88,6 +97,9 @@ public class Order {
         return total;
     }
 
+    /*
+    Getter buat mangambil keterangan
+     */
     public String getKeterangan(Context context){
         String keterangan = "";
         if (this.isWhippedCream()) {
