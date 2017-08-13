@@ -103,11 +103,11 @@ public class Order {
     public String getKeterangan(Context context){
         String keterangan = "";
         if (this.isWhippedCream()) {
-            keterangan = keterangan + context.getString(R.string.label_whipped_cream) + " = 3";
+            keterangan = keterangan + context.getString(R.string.label_whipped_cream) + " = " + WHIPPED_CREAM_PRICE;
         }
 
         if (this.isChocolate()) {
-            keterangan = keterangan + "\n" + context.getString(R.string.label_chocolate) + " = 4";
+            keterangan = keterangan + "\n" + context.getString(R.string.label_chocolate) + " = " + CHOCOLATE_PRICE;
         }
 
         keterangan = keterangan + "\n" + this.getName() + " " + context.getString(R.string.label_order)
